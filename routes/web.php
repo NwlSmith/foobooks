@@ -11,10 +11,23 @@
 |
 */
 
+Route::view('/', 'welcome');
+/*
 Route::get('/', function () {
     return view('welcome');
 });
+*/
 
 Route::get('/example', function () {
     return view('abc');
 });
+
+Route::get('/books/', 'BookController@index');
+
+// {title} is basically acting as an argument
+Route::get('/books/{title}', 'BookController@show');
+/*
+Route::get('/books/{title?}', function ($title) {
+    return 'Results for book: '.$title;
+});
+*/
