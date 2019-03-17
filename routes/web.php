@@ -31,3 +31,12 @@ Route::get('/books/{title?}', function ($title) {
     return 'Results for book: '.$title;
 });
 */
+
+
+/**
+ * Practice
+ */
+Route::any('/practice/{n?}', 'PracticeController@index');
+# Example routes from the discussion of P3 development (Week 6, Part 8 video)
+//Route::get('/', 'TriviaController@index');
+//Route::get('/check-answer', 'TriviaController@checkAnswer');
